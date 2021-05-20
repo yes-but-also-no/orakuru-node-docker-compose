@@ -71,7 +71,7 @@ docker-compose build bsc
 To start both `crystal-ball` and the `bsc node` in the background:
 
 ```sh
-docker-compose -d up
+docker-compose up -d
 ```
 
 To stop both `crystal-ball` and the `bsc node`:
