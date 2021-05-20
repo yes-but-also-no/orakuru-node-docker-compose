@@ -8,6 +8,8 @@ These files are meant to be a template, customized to your specific use case.
 
 Docker: [Instructions](https://docs.docker.com/get-docker/)
 
+Docker Compose: [Instructions](https://docs.docker.com/compose/install/)
+
 Crystal Ball configuration files: [Official Gitbook](https://orakuru.gitbook.io/crystal-ball/)
 
 ## Setup
