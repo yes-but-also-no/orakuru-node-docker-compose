@@ -80,10 +80,10 @@ To stop both `crystal-ball` and the `bsc node`:
 docker-compose down
 ```
 
-To start/stop only one of the services:
+To start only one of the services:
 
 ```sh
-docker-compose <up/down> <bsc/orakuru>
+docker-compose up <bsc/orakuru> [-d]
 ```
 
 ### Step 6: Confirm your bsc node is running and synchronizing
