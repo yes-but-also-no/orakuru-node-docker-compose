@@ -39,18 +39,13 @@ RUN wget https://github.com/binance-chain/bsc/releases/download/v1.1.0-beta/${BS
     rm ${BSC_NETWORK}.zip
 
 # Copy startup script
-COPY verify-node-volume.sh verify-node-volume.sh
+COPY start.sh start.sh
 
 # Set executable
-RUN chmod +x verify-node-volume.sh
+RUN chmod +x start.sh
 
 # Expose the WS port
 EXPOSE 8576/tcp
 
 # Run verify script
-CMD ./verify-node-volume.sh
-
-# Start bsc node
-ENTRYPOINT ./geth --config "./config/config.toml" --datadir "./node" \
-    --cache 18000 --txlookuplimit 0 \
-    --ws --ws.api eth --ws.addr "bsc" --ws.origins "bsc,orakuru"
+CMD ./start.sh

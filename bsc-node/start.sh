@@ -24,8 +24,8 @@ fi
 # Info
 echo "Bsc node volume mounted. Checking if we should write genesis block..."
 
-# Check if directory is empty. If it is, write genesis block
-if [ "$(ls -A "$NODE_DIR" 2> /dev/null)" == "" ]; then
+# Check if directory does not contain existing log. If it does not, write genesis block
+if [ ! -f "$NODE_DIR/bsc.log" ]; then
     # Info
     echo "Bsc node volume is empty. Writing genesis block..."
 
@@ -37,3 +37,8 @@ else
     # Info
     echo "Bsc node volume is NOT empty. Starting bsc only..."
 fi
+
+# Run node
+$GETH --config "$CONFIG_DIR/config.toml" --datadir "$NODE_DIR" \
+    --cache 18000 --txlookuplimit 0 \
+    --ws --ws.api eth --ws.addr "bsc" --ws.origins "bsc,orakuru"
