@@ -92,4 +92,4 @@ docker-compose up <bsc/orakuru> [-d]
 docker exec bsc /bsc/geth attach ws://bsc:8576 --exec eth.syncing
 ```
 
-This command will print either the current block being synced or `false` if the node is up to date.
+This command will print either the current block being synced or `false` if the node is still connecting to peers or is up to date.
