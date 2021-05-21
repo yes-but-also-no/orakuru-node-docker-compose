@@ -31,8 +31,6 @@ RUN wget https://github.com/binance-chain/bsc/releases/download/v1.1.0-beta/geth
     mv geth_linux geth && \
     chmod +x geth
 
-RUN echo $BSC_NETWORK
-
 # Download BSC config
 RUN wget https://github.com/binance-chain/bsc/releases/download/v1.1.0-beta/${BSC_NETWORK}.zip && \
     unzip ${BSC_NETWORK}.zip -d config && \
