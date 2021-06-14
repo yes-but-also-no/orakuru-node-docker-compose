@@ -11,7 +11,7 @@ services:
             - /path/to/node:/bsc/node # Update /path/to/node
     
     orakuru:
-        image: ghcr.io/orakurudata/crystal-ball:v0.2.1
+        image: ghcr.io/orakurudata/crystal-ball:latest
         container_name: orakuru # Image name for docker cli access
         ports: 
             - 9000:9000 # Prometheus monitoring, comment if unused
